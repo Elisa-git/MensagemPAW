@@ -1,0 +1,9 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(refLocalForm)" #refLocalForm="ngForm" ngNativeValidate>
+        <div class="form-group">
+            <label for="myContentNgForm">Conteúdo</label>
+            <input type="text" id="myContentNgForm" class="form-control" [ngModel]="messageLoad?.content" name="myContentNgForm" required oninvalid="this.setCustomValidity('Não vai falar nada?')" oninput="setCustomValidity('')">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
